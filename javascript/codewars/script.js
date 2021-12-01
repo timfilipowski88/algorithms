@@ -140,29 +140,30 @@ dnaStrand [A,A,A,A] `shouldBe` [T,T,T,T]
 let DNAStrand = function (dna) {
   let match = [];
   for (let i = 0; i < dna.length; i++) {
-    switch (i) {
+    switch (dna[i]) {
       case "A":
-        match.push("T");
+        match += "T";
         break;
       case "T":
-        match.push("A");
+        match +="A";
         break;
       case "G":
-        match.push("C");
+        match += "C";
         break;
       case "C":
-        match.push("G");
+        match += "G";
         break;
       default:
-        match.push("not a valid letter");
+        match = " not a valid letter ";
     }
   }
   return match;
 };
 
-let sample1 = ["A", "T", "G", "C"];
+let sample1 = "ATTGC";
+let sample2 = ["A","T","G","C"];
 console.log(DNAStrand(sample1));
-
+console.log(DNAStrand(sample2));
 /*
 6 kyu
 Find the odd int
