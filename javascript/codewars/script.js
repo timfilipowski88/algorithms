@@ -193,6 +193,7 @@ For example, when an array is passed like [19, 5, 42, 2, 77], the output should 
 
 */
 
+/*
 
 let testArr = [19, 5, 1, 2, 77];
 
@@ -214,3 +215,16 @@ function sumTwoSmallestNumbers(numbers) {
 
 console.log(sumTwoSmallestNumbers(testArr));
 console.log(sumTwoSmallestNumbers(testArr2));
+
+*/
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+/*
+Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+*/
+
+const greet = inputName => `Hello, ${inputName} how are you doing today?`;
+
+console.log(greet("tim"));
