@@ -137,6 +137,8 @@ dnaStrand [G,T,A,T] `shouldBe` [C,A,T,A]
 dnaStrand [A,A,A,A] `shouldBe` [T,T,T,T]
 */
 
+
+/*
 let DNAStrand = function (dna) {
   let match = [];
   for (let i = 0; i < dna.length; i++) {
@@ -179,3 +181,36 @@ Examples
 [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 
 */
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++
+
+/*
+Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+[10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+*/
+
+
+let testArr = [19, 5, 1, 2, 77];
+
+let testArr2 = [19, 5, 42, 8, 77];
+
+function sumTwoSmallestNumbers(numbers) {  
+  //Code here
+  let smallOne = numbers[0];
+  let smallTwo = numbers[1];
+  for (let i = 2; i < numbers.length; i++ ) {
+    if (smallOne > numbers[i]) {
+      smallOne = numbers[i];
+    } else if (smallTwo > numbers[i]) {
+      smallTwo = numbers[i];
+    }
+  }
+  return smallOne + smallTwo;
+}
+
+console.log(sumTwoSmallestNumbers(testArr));
+console.log(sumTwoSmallestNumbers(testArr2));
